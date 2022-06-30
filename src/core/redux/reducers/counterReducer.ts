@@ -1,6 +1,4 @@
-import { COUNT_UP, RESET_COUNTER } from '../actionTypes';
 import { createSlice, Draft, PayloadAction } from '@reduxjs/toolkit';
-import { CounterPayload } from '../actions/counterAction';
 
 const initialState: CounterState = {
     count: 0,
@@ -28,4 +26,8 @@ export default counterSlice.reducer;
 export type CounterState = {
     count: number;
     lastModified?: Date;
+}
+
+export type CounterPayload = {
+    date?: Date;
 }
